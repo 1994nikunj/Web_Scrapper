@@ -14,7 +14,6 @@ headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gec
            "Connection": "close",
            "Upgrade-Insecure-Requests": "1"}
 
-
 if __name__ == '__main__':
     r = requests.get(url, headers=headers)
     content = r.content
@@ -27,4 +26,4 @@ if __name__ == '__main__':
         elif soup.find(text='BUY NOW') and soup.find(text='ADD TO CART'):
             winsound.Beep(frequency=700, duration=2000)
             print('ITEM FOUND| Time: {}'.format(now))
-        time.sleep(10)
+        time.sleep(5)
